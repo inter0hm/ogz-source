@@ -449,6 +449,7 @@ _free_aligned(unsigned char *const ptr, const size_t size)
     free(ptr);
 # elif defined(WINAPI_DESKTOP)
     VirtualFree(ptr, 0U, MEM_RELEASE);
+    ptr = NULL;
 # else
 #  error Bug
 #endif
