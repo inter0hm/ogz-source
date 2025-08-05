@@ -144,7 +144,7 @@ int GetLenAsDepth(char *pDir, int nDepth)
 
 void GetRelativePath(char *pRelativePath, int maxlen, const char *pBasePath, const char *pPath)
 {
-	char szBasePath[256], szPath[256];
+	char szBasePath[PATH_MAX], szPath[PATH_MAX];
 	int i;
 
 #ifdef _WIN32
