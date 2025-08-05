@@ -129,10 +129,10 @@ DEFAULT:
 		m_szBuffer[nLength]=0;
 		m_TokenType=RTOKEN_STRING;
 
-		if(strchr(m_szBuffer,'.') && sscanf(m_szBuffer,"%f",&m_fRealNumber))
+		if(strchr(m_szBuffer,'.') && sscanf(m_szBuffer,"%f",&m_fRealNumber) == 1)
 			m_TokenType=RTOKEN_REALNUMBER;
 		else
-		if(sscanf(m_szBuffer,"%d",&m_nInteger))
+		if(sscanf(m_szBuffer,"%d",&m_nInteger) == 1)
 			m_TokenType=RTOKEN_NUMBER;
 
 		m_CurrentPosition=end;

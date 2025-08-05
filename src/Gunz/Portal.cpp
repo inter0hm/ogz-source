@@ -134,7 +134,7 @@ public:
 	ValidPortalIterator(const PortalMap& PortalList, const PortalMap::iterator& it)
 		: PortalList{ PortalList }, it{ it } {}
 
-	ValidPortalIterator& operator++(int)
+	ValidPortalIterator operator++(int)
 	{
 		auto prev_it = *this;
 		++*this;

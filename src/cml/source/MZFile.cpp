@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <limits.h>
 #include "MZFile.h"
 #include "MDebug.h"
 #include "zlib_util.h"
@@ -147,7 +148,7 @@ bool MZFile::Seek(i64 offset, SeekPos mode)
 	}
 	else if (mode == end)
 	{
-		if (Length + offset > Length)
+		if (offset > INT64_MAX - Length)
 			return false;
 	}
 
