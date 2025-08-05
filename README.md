@@ -1,6 +1,7 @@
+##[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-dark.svg)](https://sonarcloud.io/summary/new_code?id=0hmware_ogz-source)
 # Open GunZ Source
 This is the Open GunZ (GunZ The Duel game) source repo. It was forked from the Refined GunZ source (https://github.com/Asunaya/RefinedGunz) and updated by the International GunZ (http://igunz.net) private server developers.
-[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-dark.svg)](https://sonarcloud.io/summary/new_code?id=0hmware_ogz-source)
+
 # Building the source for the first time
 
 ## Windows:
