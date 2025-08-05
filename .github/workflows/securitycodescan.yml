@@ -7,6 +7,9 @@
 # SecurityCodeScan is a vulnerability patterns detector for C# and VB.NET
 
 name: SecurityCodeScan
+permissions:
+  contents: read
+  security-events: write
 
 on:
   push:
