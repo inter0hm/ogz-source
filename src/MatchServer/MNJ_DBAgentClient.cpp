@@ -40,7 +40,7 @@ bool MNJ_DBAgentClient::OnSockDisconnect(SOCKET sock)
 
 void MNJ_DBAgentClient::Send(const MUID& uidComm, const char* szCN, const char* szPW, bool bFreeLoginIP, u32 nChecksumPack, int nTotalUserCount)
 {
-	// Ǯ�� �־���´�.
+	// Ç®¿¡ ³Ö¾î³õ´Â´Ù.
 	LockPool();  //-------------------------------------------------------|
 	m_Pool.Insert(szCN, uidComm, nChecksumPack, bFreeLoginIP);
 	UnlockPool(); //------------------------------------------------------|
@@ -76,7 +76,7 @@ bool MNJ_DBAgentClient::OnSockRecv(SOCKET sock, char* pPacket, u32 dwSize)
 		NJ_PACKET* pNJPacket = (NJ_PACKET*)(m_cPacketBuf);
 		OnRecvPacket(pNJPacket);
 
-		if (m_nQueueTop-sizeof(NJ_PACKET) > 0)
+		if (m_nQueueTop > sizeof(NJ_PACKET))
 		{
 			memcpy(m_cPacketBuf, m_cPacketBuf+sizeof(NJ_PACKET), m_nQueueTop-sizeof(NJ_PACKET));
 		}
